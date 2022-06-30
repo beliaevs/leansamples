@@ -5,4 +5,13 @@ def p := (1, 2)
 #check Prod 
 #check List
 #check @List.cons
+def add1 (n : Nat) := n+1
+#eval add1 100
+#eval String.append "Hello" "!"
+#eval 2 - 4
+#eval (2 - 4 : Int)
+
+
+
+
 
