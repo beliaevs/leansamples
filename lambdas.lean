@@ -10,6 +10,14 @@ def mygcd(n : Int)(m : Int) : Int :=
 
 #eval (mygcd 111 10101)
 
-#eval Nat.add 2 3
+open Nat
+#eval succ 1
+
+def myadd : Nat → Nat → Nat
+  | m, zero   => m
+  | m, succ n => succ (myadd m n)
+
+#eval (myadd 2 7)
+
 
 
