@@ -39,3 +39,18 @@ def replaceX (α : Type) (point : PPoint α) (newX : α) : PPoint α :=
 def fives : String × Int := ("five", 5)
 
 #eval fives
+
+-- tail recursion
+def tail (n: Nat) (m:Nat): Nat :=
+  match n with
+  | Nat.zero => m
+  | Nat.succ k => tail k (m+n)
+
+#eval tail 1000000 0
+
+def tailfac (n: Nat) (p: Nat): Nat :=
+  match n with
+  | Nat.zero => p
+  | Nat.succ k => tailfac k (p*n)
+
+  #eval tailfac 10 1
