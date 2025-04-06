@@ -8,7 +8,7 @@ def mygcd(n : Int)(m : Int) : Int :=
  if n > m then (mygcd m n) else
  if n == 0 then m else (mygcd (m%n) n)
 
-#eval (mygcd 111 10101)
+#eval! (mygcd 111 10101)
 
 open Nat
 #eval succ 1
@@ -18,6 +18,3 @@ def myadd : Nat → Nat → Nat
   | m, succ n => succ (myadd m n)
 
 #eval (myadd 2 7)
-
-
-
